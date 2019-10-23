@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aagun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-15 03:46:28 &#214;S"/>
+        <attribute name="created" value="YWFndW47TEFQVE9QLVZKTVBMVFJUOzIwMTktMTAtMTU7MDI6NDc6NDQgw5ZTOzMxMDA="/>
+        <attribute name="edited" value="YWFndW47TEFQVE9QLVZKTVBMVFJUOzIwMTktMTAtMTU7MDM6NDY6Mjggw5ZTOzE7MzIxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="3 basamakl&#305; say&#305;n&#305;n toplamlar&#305;n&#305; hesapla"/>
+            <declare name="gsayi, top, md, md2, mds, mds2, bol" type="Integer" array="False" size=""/>
+            <assign variable="bol" expression="1"/>
+            <assign variable="top" expression="0"/>
+            <assign variable="md" expression="10"/>
+            <assign variable="md2" expression="10"/>
+            <assign variable="mds2" expression="0"/>
+            <input variable="gsayi"/>
+            <do expression="mds + mds2 &lt;&gt; gsayi">
+                <assign variable="mds" expression="gsayi % md"/>
+                <if expression="md == 10">
+                    <then/>
+                    <else>
+                        <assign variable="mds2" expression="gsayi % md2"/>
+                        <assign variable="md2" expression="md2*10"/>
+                    </else>
+                </if>
+                <assign variable="md" expression="md*10"/>
+                <assign variable="mds" expression="mds - mds2"/>
+                <assign variable="mds" expression="mds / bol"/>
+                <assign variable="top" expression="top + mds"/>
+                <assign variable="bol" expression="bol * 10"/>
+            </do>
+            <output expression="top" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

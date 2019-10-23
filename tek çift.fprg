@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="aagun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-15 02:47:41 &#214;S"/>
+        <attribute name="created" value="YWFndW47TEFQVE9QLVZKTVBMVFJUOzIwMTktMTAtMTU7MDI6MTI6MzEgw5ZTOzMwODg="/>
+        <attribute name="edited" value="YWFndW47TEFQVE9QLVZKTVBMVFJUOzIwMTktMTAtMTU7MDI6NDc6NDEgw5ZTOzE7MzIwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="tek/&#231;ift say&#305;&#13;&#10;n % 2 = 0 ise &#231;ift  = 1 ise tek&#13;&#10;% -- mod alma i&#351;areti&#13;&#10;"/>
+            <declare name="sayi, tekToplam, ciftToplam" type="Integer" array="False" size=""/>
+            <assign variable="tekToplam" expression="0"/>
+            <assign variable="ciftToplam" expression="0"/>
+            <output expression="&quot;Tek &#231;ift bulma program&#305; programdan &#231;&#305;kmak i&#231;in 0 de&#287;eri giriniz&quot;" newline="True"/>
+            <do expression="sayi &gt; 0">
+                <output expression="&quot;say&#305;y&#305; giriniz&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="sayi % 2 == 0">
+                    <then>
+                        <output expression="&quot;girilen sayi (&quot; &amp; sayi &amp; &quot;) &#231;ifttir.&quot;" newline="True"/>
+                        <assign variable="ciftToplam" expression="ciftToplam+sayi"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;girilen say&#305; (&quot; &amp; sayi &amp; &quot;) tektir.&quot;" newline="True"/>
+                        <assign variable="tekToplam" expression="tekToplam+sayi"/>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;Tek say&#305;lar&#305;n toplam&#305; : &quot; &amp; tekToplam &amp; &quot;---- &#199;ift say&#305;lar&#305;n toplam&#305;  : &quot; &amp; ciftToplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
